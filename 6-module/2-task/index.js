@@ -10,7 +10,7 @@ export default class ProductCard {
   }
   
   layout() {
-     return `
+    return `
       <div class="card">
         <div class="card__top">
           <img src="/assets/images/products/${ this.product.image }" class="card__image" alt="product">

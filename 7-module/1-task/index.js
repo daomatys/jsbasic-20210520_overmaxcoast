@@ -35,18 +35,13 @@ export default class RibbonMenu {
   
   initRibbon() {
     this.ribbonSub('arrow_right').classList.add('ribbon__arrow_visible');
-    this.elem.addEventListener('click', this.onClickEvent);
+    this.elem.addEventListener('click', this.onClick);
   }
   
-  onClickEvent = ({target}) => {
-    if ( target.closest('.ribbon__item') )
-      this.clickOnItem( target );
-    
-    if ( target.closest('.ribbon__arrow_left') )
-      this.clickOnArrow( -1 );
-    
-    if ( target.closest('.ribbon__arrow_right') )
-      this.clickOnArrow( 1 );
+  onClick = ({target}) => {
+    if ( target.closest('.ribbon__item') ) this.clickOnItem( target );
+    if ( target.closest('.ribbon__arrow_left') ) this.clickOnArrow( -1 );
+    if ( target.closest('.ribbon__arrow_right') ) this.clickOnArrow( 1 );
   }
   
   clickOnItem = (aimNew) => {
