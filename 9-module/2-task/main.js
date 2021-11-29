@@ -10,6 +10,8 @@ import ProductsGrid from '../../8-module/2-task/index.js';
 import CartIcon from '../../8-module/1-task/index.js';
 import Cart from '../../8-module/4-task/index.js';
 
+import productsArray from './products.json' assert { type: "json" };;
+
 export default class Main {
 
   constructor() {
@@ -18,6 +20,7 @@ export default class Main {
     this.blockSlider = new StepSlider({ steps: 5, value: 3 });
     this.blockCartIcon = new CartIcon();
     this.blockCart = new Cart( this.blockCartIcon );
+    this.productsArray = productsArray;
   }
 
   async render() {
@@ -25,13 +28,14 @@ export default class Main {
       document
         .querySelector(`[data-${ suffix }-holder]`)
         .append( block.elem );
-    }
+    };
+
     incrust( this.blockCarousel, 'carousel' );
     incrust( this.blockRibbon, 'ribbon' );
     incrust( this.blockSlider, 'slider' );
     incrust( this.blockCartIcon, 'cart-icon' );
     
-    await this.initProductsGrid();
+    this.initProductsGrid();
     
     document.querySelector('.products-grid').remove();
     incrust( this.blockGrid, 'products-grid' );
@@ -41,9 +45,6 @@ export default class Main {
   }
   
   async initProductsGrid() {
-    const response = await fetch('./products.json');
-    
-    this.productsArray = await response.json();
     this.blockGrid = new ProductsGrid( this.productsArray );
   }
   
