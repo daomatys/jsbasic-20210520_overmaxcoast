@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const PAGE_INDEX = './9-module/2-task/';
 
 module.exports = {
@@ -52,7 +53,9 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'index.css',
+    }),
     new HtmlWebpackPlugin({
       template: `${PAGE_INDEX}/index.html`
     }),
