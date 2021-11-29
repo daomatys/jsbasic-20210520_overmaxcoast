@@ -3,17 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const PAGE_INDEX = './9-module/2-task/';
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist')
+};
 
 module.exports = {
   mode: 'production',
-
-  entry: `${PAGE_INDEX}/index.js`,
-
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js'
-  },
 
   devServer: {
     static: {
@@ -21,6 +17,19 @@ module.exports = {
     },
     compress: true,
     port: 9000,
+  },
+
+  entry: {
+    app: PATHS.src
+  },
+
+  externals: {
+    paths: PATHS
+  },
+
+  output: {
+    filename: 'index.js',
+    path: PATHS.dist
   },
 
   module: {
@@ -57,7 +66,7 @@ module.exports = {
       filename: 'index.css',
     }),
     new HtmlWebpackPlugin({
-      template: `${PAGE_INDEX}/index.html`
+      template: `${PATHS.src}/index.html`
     }),
   ]
 };
