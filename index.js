@@ -150,23 +150,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/index.css":
-/*!***********************!*\
-  !*** ./src/index.css ***!
-  \***********************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/index.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _9_module_2_task_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../9-module/2-task/index.js */ \"./9-module/2-task/index.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./index.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://tasks-jsbasic/./index.js?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./index.css":
+/*!*******************!*\
+  !*** ./index.css ***!
+  \*******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _9_module_2_task_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../9-module/2-task/index.js */ \"./9-module/2-task/index.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tasks-jsbasic/./index.css?");
 
 /***/ }),
 
@@ -240,7 +240,7 @@ eval("module.exports = JSON.parse('[{\"name\":\"Laab kai chicken salad\",\"price
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./index.js");
 /******/ 	
 /******/ })()
 ;
