@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./assets/styles/common.css":
-/*!**********************************!*\
-  !*** ./assets/styles/common.css ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tasks-jsbasic/./assets/styles/common.css?");
-
-/***/ }),
-
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -36,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ \"./src/index.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _assets_styles_common_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/styles/common.css */ \"./assets/styles/common.css\");\n\r\n\r\n\r\n\r\nconst main = new _index_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\r\nmain.render().then( () => console.log('Страница готова!') );\n\n//# sourceURL=webpack://tasks-jsbasic/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ \"./src/index.js\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\r\n\r\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/index.js?");
 
 /***/ })
 
