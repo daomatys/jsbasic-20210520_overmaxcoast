@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = {
-  src: path.join(__dirname, './src'),
+  src: path.join(__dirname, ''),
   dist: path.join(__dirname, './dist')
 };
 
