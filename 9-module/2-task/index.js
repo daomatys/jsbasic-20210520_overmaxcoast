@@ -10,6 +10,8 @@ import ProductsGrid from '../../8-module/2-task/index.js';
 import CartIcon from '../../8-module/1-task/index.js';
 import Cart from '../../8-module/4-task/index.js';
 
+import all from './all.css';
+
 export default class Main {
 
   constructor() {

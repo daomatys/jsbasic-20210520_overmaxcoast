@@ -10,7 +10,11 @@
     "test": "npm run karma",
     "karma": "karma start karma.conf.js",
     "lint": "eslint \"./*-module/**/*.js\"",
-    "lint:fix": "eslint --fix \"./*-module/**/*.js\""
+    "lint:fix": "eslint --fix \"./*-module/**/*.js\"",
+    "dev": "webpack --mode=development --watch",
+    "prod": "webpack --mode=production",
+    "try": "webpack --mode=development",
+    "host": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -25,14 +29,22 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
     "eslint": "^5.16.0",
     "eslint-plugin-import": "^2.18.2",
+    "html-webpack-plugin": "^5.5.0",
     "jasmine": "^3.3.1",
     "jasmine-core": "^3.3.0",
     "karma": "^4.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^2.0.1",
     "karma-mocha-reporter": "git+https://github.com/javascriptru/karma-mocha-reporter.git",
-    "karma-viewport": "^1.0.6"
-  }
+    "karma-viewport": "^1.0.6",
+    "mini-css-extract-plugin": "^2.4.5",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {}
 }
