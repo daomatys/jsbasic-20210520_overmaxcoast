@@ -41,7 +41,7 @@ export default class Main {
   }
   
   async initProductsGrid() {
-    const response = await fetch('products.json');
+    const response = await fetch('./products.json');
     
     this.productsArray = await response.json();
     this.blockGrid = new ProductsGrid( this.productsArray );
