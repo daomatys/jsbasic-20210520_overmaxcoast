@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, ''),
@@ -13,7 +13,7 @@ module.exports = {
 
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: PATHS.dist,
     },
     compress: true,
     port: 9000,
@@ -29,11 +29,16 @@ module.exports = {
 
   output: {
     filename: 'index.js',
-    path: PATHS.dist
+    path: PATHS.dist,
+    clean: true
   },
 
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: 'html-loader'
+      },
       {
         test: /\.css$/i,
         use: [
@@ -46,7 +51,7 @@ module.exports = {
         type: 'asset/resource',
         exclude: [/images/],
         generator: {
-          filename: 'static/fonts/[name][ext][query]'
+          filename: 'assets/fonts/[name][ext][query]'
         }
       },
       {
@@ -54,19 +59,30 @@ module.exports = {
         type: 'asset/resource',
         include: [/images/],
         generator: {
-          filename: 'static/images/[name][ext][query]'
+          filename: 'assets/images/[name][ext][query]'
         }
       }
     ]
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'index.css',
     }),
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/index.html`
     }),
-  ]
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "assets",
+          to: "assets"
+        }
+      ]
+    })
+  ],
+
+  performance: {
+    hints: false,
+  }
 };

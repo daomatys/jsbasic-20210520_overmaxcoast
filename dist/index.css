@@ -599,7 +599,7 @@
 }
 
 .cart-icon__inner {
-  background: url(static/images/cart-icon.svg) center no-repeat;
+  background: url(assets/images/cart-icon.svg) center no-repeat;
   background-size: cover;
   position: relative;
   width: 100%;
@@ -877,7 +877,7 @@
   right: 24px;
   top: 50%;
   transform: translate(0, -50%);
-  background: url(static/images/angle-sm-icon.svg) center no-repeat;
+  background: url(assets/images/angle-sm-icon.svg) center no-repeat;
   background-size: cover;
   width: 10px;
   height: 18px;
@@ -1000,7 +1000,7 @@
   left: 0;
   width: 16px;
   height: 17px;
-  background: url(static/images/pepper-icon.svg) center no-repeat;
+  background: url(assets/images/pepper-icon.svg) center no-repeat;
   background-size: cover;
   display: none;
 }
@@ -1011,7 +1011,7 @@
   right: 0;
   width: 48px;
   height: 17px;
-  background: url(static/images/pepper-icon.svg) center repeat;
+  background: url(assets/images/pepper-icon.svg) center repeat;
   display: none;
 }
 
@@ -1070,7 +1070,7 @@
   top: 5px;
   width: 12px;
   height: 11px;
-  background: url(static/images/check-icon.svg) center no-repeat;
+  background: url(assets/images/check-icon.svg) center no-repeat;
   background-size: cover;
 }
 
@@ -1177,7 +1177,7 @@
   height: 24px;
   margin-left: 12px;
   position: relative;
-  background: url(static/images/loader-icon-sm.svg) center no-repeat;
+  background: url(assets/images/loader-icon-sm.svg) center no-repeat;
   background-size: cover;
   vertical-align: bottom;
   display: inline-block;
