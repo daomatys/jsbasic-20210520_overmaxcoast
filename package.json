@@ -29,7 +29,6 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.2.3",
-    "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
     "eslint": "^8.4.0",
     "eslint-plugin-import": "^2.25.3",
