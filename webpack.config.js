@@ -37,6 +37,7 @@ const PAGES__FULLPATHS = definePagesPaths( PAGES__ROOT );
 const PAGES__ENTRIES = defineEntryPoints( PAGES__FULLPATHS );
 const PAGES__NAMES = PAGES__FULLPATHS.map( filepath => defineFileName( filepath ) );
 
+
 module.exports = {
   mode: 'production',
 
@@ -65,9 +66,6 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: 'html-loader',
-        options: {
-          esModule: false,
-        }
       },
       {
         test: /\.css$/i,
@@ -76,7 +74,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
           }
         ]
       },
@@ -123,5 +121,5 @@ module.exports = {
       '@lib': path.join( PATHS.src, '/assets/lib/' ),
       '@styles': path.join( PATHS.src, '/assets/styles/' )
     }
-  },
+  }
 };

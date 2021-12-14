@@ -24,11 +24,9 @@ export default class Main {
   }
 
   async render() {
-    const incrust = ( block, suffix ) => {
-      document
-        .querySelector(`[data-${ suffix }-holder]`)
-        .append( block.elem );
-    };
+    const incrust = ( block, suffix ) => document
+      .querySelector(`[data-${ suffix }-holder]`)
+      .append( block.elem );
 
     incrust( this.blockCarousel, 'carousel' );
     incrust( this.blockRibbon, 'ribbon' );
