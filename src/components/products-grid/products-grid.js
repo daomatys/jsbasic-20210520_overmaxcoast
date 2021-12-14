@@ -1,8 +1,8 @@
 import createElement from '@lib/create-element.js';
 
-import ProductCard from './__card/product-grid__card.js';
+import ProductCard from './__card/products-grid__card.js';
 
-import './product-grid.css';
+import './products-grid.css';
 
 
 export default class ProductGrid {

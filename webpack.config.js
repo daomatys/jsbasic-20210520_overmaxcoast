@@ -2,12 +2,38 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+
+const defineDistSection = ext => ext + '/[name].' + ext;
+
+const defineFileName = filepath => filepath.match(/[^\\/]+$/)[0].replace(/\.js$/,'');
+
+const definePagesPaths = function definePagesPathsByRootFolder( folder ) {
+  const recursiveSearch = volumePath => fs
+    .readdirSync( volumePath )
+    .map( chapterName => path.join( volumePath, chapterName ) )
+    .flatMap( chapterPath => /\..+$/.exec( chapterPath ) ? chapterPath : recursiveSearch( chapterPath ) );
+
+  return recursiveSearch( folder ).filter( filepath => /(?<!\.noentry)\.js$/.exec( filepath ) );
+}
+
+const defineEntryPoints = function convertArrayOfPathsIntoEntriesObject( pagesArray ) {
+  const preparedArray = pagesArray
+    .map( page => [ defineFileName( page ), page ] );
+
+  return Object.fromEntries( preparedArray );
+}
+
+
 const PATHS = {
   src: path.join(__dirname, '/src'),
   dist: path.join(__dirname, '/dist')
 }
 
 const PAGES__ROOT = path.join( PATHS.src, 'pages' );
+
+const PAGES__FULLPATHS = definePagesPaths( PAGES__ROOT );
+const PAGES__ENTRIES = defineEntryPoints( PAGES__FULLPATHS );
+const PAGES__NAMES = PAGES__FULLPATHS.map( filepath => defineFileName( filepath ) );
 
 module.exports = {
   mode: 'production',
@@ -20,16 +46,14 @@ module.exports = {
     port: 9000,
   },
 
-  entry: {
-    app: PATHS.src
-  },
+  entry: PAGES__ENTRIES,
 
   externals: {
     paths: PATHS
   },
 
   output: {
-    filename: 'index.js',
+    filename: defineDistSection('js'),
     path: PATHS.dist,
     clean: true
   },
@@ -70,11 +94,13 @@ module.exports = {
   },
 
   plugins: [
+    ...PAGES__NAMES.map( (pageName, index) => new HtmlWebpackPlugin({
+      template: PAGES__FULLPATHS[index].replace(/\.js$/,'.html'),
+      filename: `./${pageName}.html`,
+      chunks: [ pageName ],
+    })),
     new MiniCssExtractPlugin({
-      filename: 'index.css',
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/index.html`
+      filename: defineDistSection('css'),
     })
   ],
 
@@ -89,7 +115,7 @@ module.exports = {
       '@images': path.join( PATHS.src, '/assets/images/' ),
       '@fonts': path.join( PATHS.src, '/assets/fonts/' ),
       '@lib': path.join( PATHS.src, '/assets/lib/' ),
-      '@styles': path.join( PATHS.src, '/styles/' )
+      '@styles': path.join( PATHS.src, '/assets/styles/' )
     }
   },
 };
