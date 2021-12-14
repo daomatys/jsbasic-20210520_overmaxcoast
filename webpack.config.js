@@ -4,9 +4,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
-  src: path.join(__dirname, ''),
-  dist: path.join(__dirname, './dist')
-};
+  src: path.join(__dirname, '/src'),
+  dist: path.join(__dirname, '/dist')
+}
 
 module.exports = {
   mode: 'production',
@@ -37,7 +37,10 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          esModule: false,
+        }
       },
       {
         test: /\.css$/i,
@@ -71,18 +74,20 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/index.html`
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "assets",
-          to: "assets"
-        }
-      ]
     })
   ],
 
   performance: {
     hints: false,
-  }
+  },
+
+  resolve: {
+    alias: {
+      '@variables': path.join( PATHS.src, '/variables/variables.scss' ),
+      '@components': path.join( PATHS.src, '/components/' ),
+      '@images': path.join( PATHS.src, '/assets/images/' ),
+      '@fonts': path.join( PATHS.src, '/assets/fonts/' ),
+      '@styles': path.join( PATHS.src, '/styles/' )
+    }
+  },
 };
