@@ -1,5 +1,6 @@
 import './carousel.css';
 
+
 export default class Carousel {
   
   constructor(slides) {

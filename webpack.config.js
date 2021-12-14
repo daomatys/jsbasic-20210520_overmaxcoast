@@ -87,6 +87,7 @@ module.exports = {
       '@components': path.join( PATHS.src, '/components/' ),
       '@images': path.join( PATHS.src, '/assets/images/' ),
       '@fonts': path.join( PATHS.src, '/assets/fonts/' ),
+      '@lib': path.join( PATHS.src, '/assets/lib/' ),
       '@styles': path.join( PATHS.src, '/styles/' )
     }
   },

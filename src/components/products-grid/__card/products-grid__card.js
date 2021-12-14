@@ -1,4 +1,4 @@
-import createElement from '../../assets/lib/create-element.js';
+import createElement from '@lib/create-element.js';
 
 import './products-grid__card.css';
 

@@ -1,3 +1,6 @@
+import './step-slider.css';
+
+
 export default class StepSlider {
   
   constructor({ steps, value }) {

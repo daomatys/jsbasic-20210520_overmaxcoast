@@ -1,16 +1,16 @@
-import Carousel from '../../6-module/3-task/index.js';
-import slides from '../../6-module/3-task/slides.js';
+import Carousel from '@components/carousel/carousel.js';
+import slides from '@components/carousel/__slides/carousel__slides.js';
 
-import RibbonMenu from '../../7-module/1-task/index.js';
-import categories from '../../7-module/1-task/categories.js';
+import RibbonMenu from '@components/ribbon-menu/ribbon-menu.js';
+import categories from '@components/ribbon-menu/__categories/ribbon-menu__categories.js';
 
-import StepSlider from '../../7-module/4-task/index.js';
-import ProductsGrid from '../../8-module/2-task/index.js';
+import ProductsGrid from '@components/products-grid/products-grid.js';
+import productsArray from '@components/products-grid/products-grid.json' assert { type: "json" };
 
-import CartIcon from '../../8-module/1-task/index.js';
-import Cart from '../../8-module/4-task/index.js';
+import StepSlider from '@components/step-slider/step-slider.js';
+import CartIcon from '@components/cart-icon/cart-icon.js';
+import Cart from '@components/cart/cart.js';
 
-import productsArray from './products.json' assert { type: "json" };;
 
 export default class Main {
 

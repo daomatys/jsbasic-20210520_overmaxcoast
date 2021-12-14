@@ -1,4 +1,7 @@
-import createElement from '../../assets/lib/create-element.js';
+import createElement from '@lib/create-element.js';
+
+import './modal-window.css';
+
 
 export default class Modal {
   

@@ -1,4 +1,5 @@
-import createElement from '../../assets/lib/create-element.js';
+import './ribbon-menu.css';
+
 
 export default class RibbonMenu {
   
