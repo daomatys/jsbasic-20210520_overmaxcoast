@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/assets/styles/common.css":
+/*!**************************************!*\
+  !*** ./src/assets/styles/common.css ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/assets/styles/common.css?");
+
+/***/ }),
+
 /***/ "./src/pages/404/404.css":
 /*!*******************************!*\
   !*** ./src/pages/404/404.css ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _404_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./404.css */ \"./src/pages/404/404.css\");\n\r\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/pages/404/404.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_common_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @styles/common.css */ \"./src/assets/styles/common.css\");\n/* harmony import */ var _404_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./404.css */ \"./src/pages/404/404.css\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://tasks-jsbasic/./src/pages/404/404.js?");
 
 /***/ })
 
