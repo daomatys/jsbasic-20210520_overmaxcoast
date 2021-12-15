@@ -3,7 +3,6 @@ const path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlSWebpackPlugin = require('htmls-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
@@ -105,13 +104,6 @@ module.exports = {
       filename: `./${pageName}.html`,
       chunks: [ pageName ],
     })),
-    /*new HtmlSWebpackPlugin({
-      htmls: PAGES__NAMES.map( (pageName, index) => ({
-        src: PAGES__FULLPATHS[index].replace(/\.js$/,'.html'),
-        filename: `./${pageName}.html`,
-        chunks: [ pageName ],
-      }))
-    }),*/
     new MiniCssExtractPlugin({
       filename: defineDistSection('css'),
     }),

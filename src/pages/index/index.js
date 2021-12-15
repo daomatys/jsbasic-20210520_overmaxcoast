@@ -1,7 +1,7 @@
 import '@styles/common.css';
 import '@styles/filters.css';
 
-import Main from './main.noentry.js';
+import Main from '../../components/launcher/launcher.js';
 
 
 (function () {
