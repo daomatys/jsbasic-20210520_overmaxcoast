@@ -19,19 +19,19 @@ export default class Carousel {
   layoutArrows(way) {
     return `
       <div class="carousel__arrow carousel__arrow_${ way }">
-        <img src="/assets/images/icons/angle${ way === 'left' ? '-left' : '' }-icon.svg" alt="icon">
+        <img src="./assets/images/icons/angle${ way === 'left' ? '-left' : '' }-icon.svg" alt="icon">
       </div>`;
   }
   
   layoutSlidesSingle(item) {
     return `
       <div class="carousel__slide" data-id="${ item.id }">
-        <img src="/assets/images/carousel/${ item.image }" class="carousel__img" alt="slide">
+        <img src="./assets/images/carousel/${ item.image }" class="carousel__img" alt="slide">
         <div class="carousel__caption">
           <span class="carousel__price">€${ item.price.toFixed(2) }</span>
           <div class="carousel__title">${ item.name }</div>
           <button type="button" class="carousel__button">
-            <img src="/assets/images/icons/plus-icon.svg" alt="icon">
+            <img src="./assets/images/icons/plus-icon.svg" alt="icon">
           </button>
         </div>
       </div>`;

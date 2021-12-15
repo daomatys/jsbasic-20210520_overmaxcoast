@@ -20,7 +20,7 @@ export default class RibbonMenu {
   layoutRibbonArrow(way) {
     return `
       <button class="ribbon__arrow ribbon__arrow_${ way }">
-        <img src="/assets/images/icons/angle-icon.svg" alt="icon">
+        <img src="./assets/images/icons/angle-icon.svg" alt="icon">
       </button>
     `;
   }
