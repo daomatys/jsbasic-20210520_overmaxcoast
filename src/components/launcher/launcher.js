@@ -12,7 +12,7 @@ import CartIcon from '@components/cart-icon/cart-icon.js';
 import Cart from '@components/cart/cart.js';
 
 
-export default class Main {
+export default class Launcher {
 
   constructor() {
     this.blockCarousel = new Carousel( slides );
